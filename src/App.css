@@ -1,0 +1,140 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 0;
+}
+
+.app-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.filter-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.filters-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 8px 0;
+  margin-top: 4px;
+  z-index: 10;
+  width: 150px;
+}
+
+.filters-dropdown div {
+  padding: 8px 16px;
+  cursor: pointer; /* Pointer cursor for better UX */
+}
+.filters-dropdown div:hover {
+  background-color: #f1f1f1;
+}
+
+.table-container {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden; /* Important for border-radius */
+}
+
+.table-header {
+  font-weight: 600;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 50px 2fr 1.5fr 2fr 1fr 1.5fr 1.5fr;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.table-header div {
+  padding: 12px 0;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection on click */
+}
+
+.table-row {
+  border-bottom: 1px solid #e0e0e0;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.table-row:hover {
+  background-color: #f5f5f5; /* Row hover effect */
+}
+
+.table-row > div {
+    padding: 16px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Handle overflow with ellipsis */
+}
+
+.customer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.customer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.customer-name {
+    font-weight: 500;
+}
+
+.customer-phone {
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* Utility for sorting indicator */
+.sort-indicator {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.loading-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
+  padding: 16px 0;
+}
