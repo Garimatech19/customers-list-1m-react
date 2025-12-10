@@ -1,16 +1,77 @@
-# React + Vite
+# 📌 Customers List 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance **React + Vite** application that displays **1 million customer records** with smooth infinite scrolling, search, and sorting — built using **plain CSS** and optimized for speed.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+### 🔹 1M Records Generation
+- Records generated dynamically at runtime (no API).
+- Each customer includes:
+  - `id`, `name`, `email`, `phone`
+  - `score`, `lastMessageAt`
+  - `addedBy`, `avatar`
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔹 Infinite Scroll (30 rows per batch)
+- Loads 30 rows at a time.
+- Smooth scrolling (no UI freeze).
+- Optimized table rendering.
 
-## Expanding the ESLint configuration
+### 🔹 Search (Debounced 250ms)
+- Filters by **name**, **email**, or **phone**.
+- Partial & case-insensitive match.
+- Efficient on large datasets.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔹 Sorting
+- Click any column to toggle:
+  - Ascending  
+  - Descending  
+- Visual sort indicators.
+
+### 🔹 Filters Dropdown (Static)
+- Opens/closes on click.
+- No filtering logic (as per assignment).
+
+### 🔹 UI Experience
+- Sticky table header.
+- Row hover state.
+- Responsive layout.
+- Smooth user interactions with large data.
+
+---
+
+## 🛠️ Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| **React + Vite** | Fast bundling & development |
+| **JavaScript (ESM)** | Application logic |
+| **Plain CSS** | Styling (no Tailwind/Bootstrap allowed) |
+| **IndexedDB / in-memory** | Data storage handling |
+| **Node 22+** | Runtime requirement |
+
+---
+
+## 🧪 What This App Demonstrates
+
+- Efficient handling of **1,000,000+ rows**
+- Infinite scrolling with windowing / lazy loading
+- Optimized rendering for large datasets
+- Clean and structured React architecture
+- Smooth and responsive UX under heavy load
+- Frontend interview–level problem solving
+
+
+## ✔️ Acceptance Criteria Checklist
+
+| Feature                         | Status |
+|---------------------------------|--------|
+| Smooth scrolling across 1M rows | ✅     |
+| Search with 250ms debounce      | ✅     |
+| Sorting toggle works            | ✅     |
+| Static filters dropdown         | ✅     |
+| Sticky table header             | ✅     |
+| Clean, readable code            | ✅     |
+
+
